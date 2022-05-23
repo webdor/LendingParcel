@@ -67,3 +67,23 @@ body {
         transition: .3s all ease;
     }
 }
+.section__title {
+    color: $primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    @media  (max-width: $breakpoint992) {
+        font-size: 32px;
+        line-height: 120%;
+    }
+}
+.section__subtitle {
+    color: $secondary;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
