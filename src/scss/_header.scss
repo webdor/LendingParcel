@@ -3,7 +3,6 @@
 
 // Navbar
 nav {
-    background-color: rgba(0, 119, 134, 0.651);
     overflow: hidden;
 }
 
@@ -11,27 +10,66 @@ nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    align-items: center;
 }
 
-.logo {
-    a {
-        color: white;
-    }
+.logo__item {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 18px;
+    color: $primary;
 }
 
 .menu {
     display: flex;
+    align-items: center;
+    gap: 50px;
 
     // .menu__item
     &__item {
-        margin-left: 25px;
+
+        &:last-child {
+            a {
+                color: #fff;
+                padding: 13px 20px;
+            }
+
+        }
     }
 
     // .menu__item-link
     &__item-link {
-        color: white;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        color: $secondary;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        @media (max-width: $breakpoint768) {
+            gap: 0;
+        }
+
+        svg {
+            @media (max-width: $breakpoint768) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: $neutral;
+            transition: .3s all ease;
+
+            path {
+                fill: $neutral;
+                transition: .3s all ease;
+            }
+        }
     }
 }
 
@@ -45,7 +83,7 @@ nav {
     // .menu
     .menu {
         position: fixed;
-        background: #131418;
+        background: $neutral;
         left: 0;
         top: 0;
         height: 100vh;
@@ -133,6 +171,7 @@ nav {
 
     // .menu__link
     .menu__item-link {
+        font-size: 26px;
         color: white;
     }
 }

@@ -5,10 +5,6 @@
     margin: 0 auto;
     padding: 0 $containerSidePadding + px;
 
-    @media (max-width: $breakpoint1450) {
-        max-width: 1200px;
-    }
-
     @media (max-width: $breakpoint992) {
         max-width: 970px;
     }
@@ -39,5 +35,35 @@ body {
 
     100% {
         opacity: 1;
+    }
+}
+.btn {
+    background: $neutral;
+    border-radius: 4px;
+    color: #fff  ;
+    padding: 11px 24px;
+    display: inline-flex;
+    gap: 7px;
+    transition: .3s all ease;
+
+    &:hover {
+        background: $neutralDark;
+
+        svg {
+            transform: translate(10px);
+            transition: .3s all ease;
+        }
+    }
+}
+.btn__outline {
+    border-radius: 4px;
+    color: $neutral;
+    padding: 11px 24px;
+    display: inline-flex;
+    transition: .3s all ease;
+
+    &:hover {
+        color: $neutralDark;
+        transition: .3s all ease;
     }
 }
